@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h2>Vous avez des questions ?</h2>
+  <h2>Nos destinations</h2>
 </template>
 
 <style scoped lang="sass">

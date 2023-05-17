@@ -1,9 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <h2>Bienvenue à la maison !</h2>
 </template>
+
+<style scoped lang="sass">
+  h2
+    color: blueviolet
+    text-align: center
+</style>

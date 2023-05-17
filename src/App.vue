@@ -49,23 +49,19 @@ const destinations = reactive([
 </script>
 
 <template>
-  <!--  <header>
-
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-      <div class="wrapper">
-          <h1>Hello afasfd</h1>
-        <HelloWorld msg="You did it!" />
-
-        <nav>
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-        </nav>
-      </div>
-    </header>
-
-    <RouterView />-->
     <h1>{{ titre }}</h1>
+
+    <!-- Menu de navigation -->
+    <nav>
+      <router-link to="/">Accueil</router-link>
+      -
+      <router-link to="/about">A propos</router-link>
+        -
+      <router-link to="/destinations">Nos destinations</router-link>
+    </nav>
+    <!-- Emplacement ou sera affiché le composant de la route -->
+    <RouterView />
+
     <mon-bouton couleur="red" texte="toto">Txtx</mon-bouton>
     <mon-bouton couleur="yellow">Titi</mon-bouton>
     <mon-bouton texte="Bonjour">Tutu</mon-bouton>
