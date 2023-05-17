@@ -3,11 +3,12 @@
 // import HelloWorld from './components/HelloWorld.vue'
 
 // Importe ref depuis vue
-import {ref} from 'vue'
+import {reactive, ref} from 'vue'
 import CarteDestination from "@/components/CarteDestination.vue";
+import MonBouton from "@/components/MonBouton.vue";
 
 const titre = ref('Destinations de vacances')
-const destinations = ref([
+const destinations = reactive([
     {
         id: 1,
         nom: 'Malaga',
@@ -65,6 +66,13 @@ const destinations = ref([
 
     <RouterView />-->
     <h1>{{ titre }}</h1>
+    <mon-bouton couleur="red" texte="toto">Txtx</mon-bouton>
+    <mon-bouton couleur="yellow">Titi</mon-bouton>
+    <mon-bouton texte="Bonjour">Tutu</mon-bouton>
+    <mon-bouton></mon-bouton>
+    <MonBouton>blibla</MonBouton>
+    <img class="logo" src="/favicon.ico" alt="Icone">
+    <img class="logo" src="@/assets/logo.svg" alt="Logo">
     <div class="nos-destinations">
       <carte-destination
               v-for="destFor in destinations"
@@ -81,6 +89,12 @@ npm install -D sass
 */
 h1 {
   text-align: center;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 125px;
 }
 
 .nos-destinations {
